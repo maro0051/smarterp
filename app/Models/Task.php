@@ -1,0 +1,43 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Task extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'project_id',
+        'title',
+        'description',
+        'assigned_to',
+        'priority',
+        'status',
+        'due_date',
+        'order',
+        'created_by',
+    ];
+
+    protected $casts = [
+        'due_date' => 'date',
+    ];
+
+    // Relationships
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
+
+    public function assignedTo()
+    {
+        return $this->belongsTo(User::class, 'assigned_to');
+    }
+
+    public function createdBy()
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
+}
