@@ -1,58 +1,279 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SmartERP - Enterprise Resource Planning System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![SmartERP](https://img.shields.io/badge/SmartERP-v1.0-blue)
+![Laravel](https://img.shields.io/badge/Laravel-13.9-red)
+![PHP](https://img.shields.io/badge/PHP-8.3-purple)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## About Laravel
+SmartERP is a comprehensive, modern Enterprise Resource Planning system built with Laravel. It manages all aspects of your business from HR to Accounting in one unified platform.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📸 Screenshots
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Dashboard
+- **Super Admin** - Full analytics, charts, revenue tracking
+- **HR Manager** - Employee stats, attendance, leave management
+- **Accountant** - Financial dashboard, expense approvals
+- **Employee** - Personal attendance, payslips, tasks
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Modules
+- Employee Management with ID Cards
+- Attendance with Punch In/Out system
+- Leave Management with approval workflow
+- Project Management with Kanban Board
+- Inventory & Stock Management
+- Sales & Invoice Management
+- Accounting & Expense Tracking
+- CRM & Lead Management
+- Payroll & Payslip Generation
 
-## Learning Laravel
+## 🚀 Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Core Modules
+| Module | Description |
+|--------|-------------|
+| **Dashboard** | Role-based dashboards with charts and analytics |
+| **Employee Management** | CRUD operations, departments, positions |
+| **Attendance** | Punch in/out system, attendance history |
+| **Leave Management** | Request, approve, reject workflow |
+| **HR Module** | Recruitment, interviews, performance reviews |
+| **ID Cards** | Generate and print employee ID cards |
+| **Inventory** | Products, categories, suppliers, warehouses |
+| **Stock Movement** | Track stock in/out across warehouses |
+| **Sales** | Customers, invoices, payments |
+| **Accounting** | Expenses with approval workflow |
+| **CRM** | Lead management and conversion |
+| **Projects** | Kanban board, task assignment |
+| **Payroll** | Generate and process payroll |
+| **Payslips** | Employee payslip viewing and PDF download |
+| **Reports** | Sales, inventory, financial reports |
+| **Settings** | Company configuration |
+| **User Management** | Role-based access control |
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Technical Features
+- ✅ **Role-Based Access Control** (7 roles)
+- ✅ **Permission System** (50+ permissions)
+- ✅ **Responsive Design** (Bootstrap 5)
+- ✅ **Charts & Analytics** (Chart.js)
+- ✅ **PDF Export** (DomPDF)
+- ✅ **SweetAlert Notifications**
+- ✅ **Activity Logging**
+- ✅ **REST API Ready**
+- ✅ **Two-Factor Authentication**
+- ✅ **Email Notifications**
+- ✅ **CSV Export**
+- ✅ **Mobile Responsive**
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 👥 User Roles
 
-## Agentic Development
+| Role | Description | Access Level |
+|------|-------------|--------------|
+| **Super Admin** | Full system access | Everything |
+| **HR Manager** | Employee management | HR modules, reports |
+| **Accountant** | Financial management | Expenses, invoices, reports |
+| **Inventory Manager** | Stock management | Products, suppliers, warehouses |
+| **Sales Manager** | Sales and CRM | Customers, leads, invoices |
+| **Employee** | Self-service | Own attendance, leave, tasks, payslips |
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## 🔐 Default Login Credentials
+
+| Role | Email | Password |
+|------|-------|----------|
+| Super Admin | admin@smarterp.com | password123 |
+| HR Manager | sarah.johnson@smarterp.com | password123 |
+| Accountant | michael.chen@smarterp.com | password123 |
+| Inventory Manager | emily.rodriguez@smarterp.com | password123 |
+| Sales Manager | david.thompson@smarterp.com | password123 |
+| Employee | lisa.anderson@smarterp.com | password123 |
+
+## 📋 Requirements
+
+- PHP 8.2+
+- MySQL 5.7+ or SQLite
+- Composer
+- Node.js & NPM
+- Laravel 13.x
+
+## 🛠️ Installation
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/yourusername/smarterp.git
+cd smarterp
+Step 2: Install Dependencies
+bash
+composer install
+npm install
+Step 3: Configure Environment
+bash
+cp .env.example .env
+php artisan key:generate
+Step 4: Configure Database
+Edit .env file:
+
+env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=smarterp
+DB_USERNAME=root
+DB_PASSWORD=
+Step 5: Run Migrations & Seed
+bash
+php artisan migrate:fresh --seed
+Step 6: Build Frontend Assets
+bash
+npm run build
+Step 7: Create Storage Link
+bash
+php artisan storage:link
+Step 8: Start Server
+bash
+php artisan serve
+Visit: http://localhost:8000
+
+📁 Project Structure
+text
+smarterp/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │   ├── Auth/           # Authentication controllers
+│   │   │   ├── HR/             # HR module controllers
+│   │   │   └── Api/            # API controllers
+│   │   ├── Middleware/
+│   │   └── Requests/
+│   ├── Models/                 # Eloquent models
+│   └── Mail/                   # Email mailable classes
+├── database/
+│   ├── migrations/             # Database migrations
+│   └── seeders/                # Database seeders
+├── resources/
+│   └── views/
+│       ├── layouts/            # Main layout
+│       ├── auth/               # Authentication pages
+│       ├── employees/          # Employee management
+│       ├── hr/                 # HR module views
+│       ├── projects/           # Project management
+│       ├── tasks/              # Task views
+│       └── ...                 # Other module views
+├── routes/
+│   ├── web.php                 # Web routes
+│   ├── api.php                 # API routes
+│   └── auth.php                # Auth routes
+└── public/                     # Public assets
+🔄 Workflow Examples
+Employee Leave Request Flow
+Employee creates leave request
+
+HR Manager receives notification
+
+HR Manager approves or rejects
+
+Employee receives notification of decision
+
+Task Assignment Flow
+Admin/HR creates project and tasks
+
+Assigns tasks to employees
+
+Employee receives notification
+
+Employee starts working (Status: In Progress)
+
+Employee submits for review (Status: Review)
+
+Manager approves (Status: Completed)
+
+Punch In/Out Flow
+Employee enters employee code
+
+System records check-in time
+
+If after 9:00 AM, marked as "Late"
+
+Employee enters code again to check out
+
+Attendance record complete
+
+🎨 Color Theme
+Primary Blue: #1e3a8a
+
+Accent Orange: #f97316
+
+Success Green: #10b981
+
+Warning Yellow: #f59e0b
+
+Danger Red: #ef4444
+
+🔌 API Endpoints
+Method	Endpoint	Description
+GET	/api/v1/employees	List employees
+GET	/api/v1/products	List products
+GET	/api/v1/customers	List customers
+GET	/api/v1/invoices	List invoices
+GET	/api/v1/dashboard/stats	Dashboard statistics
+📦 Packages Used
+Spatie Permission - Role & permission management
+
+Laravel Breeze - Authentication scaffold
+
+Chart.js - Charts and graphs
+
+SweetAlert2 - Alert dialogs
+
+Bootstrap 5 - UI framework
+
+Bootstrap Icons - Icon library
+
+DomPDF - PDF generation
+
+Laravel Sanctum - API authentication
+
+🧪 Testing
+bash
+# Run all tests
+php artisan test
+
+# Run specific test
+php artisan test --filter=EmployeeTest
+📝 License
+This project is licensed under the MIT License.
+
+👨‍💻 Author
+SmartERP Development Team
+
+🙏 Support
+For support, email: admin@smarterp.com
+
+Made with ❤️ using Laravel
+
+text
 
 ```bash
-composer require laravel/boost --dev
+# Save the README
+echo "README.md created successfully!"
+The README includes:
 
-php artisan boost:install
-```
+✅ Project overview and badges
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+✅ Feature list with all modules
 
-## Contributing
+✅ User roles and permissions
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+✅ Default login credentials
 
-## Code of Conduct
+✅ Installation steps
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+✅ Project structure
 
-## Security Vulnerabilities
+✅ Workflow examples
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+✅ API endpoints
 
-## License
+✅ Color theme reference
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+✅ Packages used
+
+✅ License information
